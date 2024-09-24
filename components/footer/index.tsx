@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 function Footer() {
   return (
-    <footer className="bg-white w-full px-20">
-      <div className="mx-auto px-4 pb-6 pt-16 sm:px-6 lg:px-8">
+    <footer className=" bg-white w-full px-20">
+      <div className=" w-full lg:px-4 pb-6 pt-16">
         <div className="lg:flex lg:items-center lg:justify-between">
           <div className="flex justify-center text-teal-600 sm:justify-start dark:text-teal-300">
             <div className="logo flex items-center justify-center">
@@ -11,16 +11,16 @@ function Footer() {
             </div>
           </div>
 
-          <p className="mt-4 max-w-md text-center leading-relaxed text-black sm:text-left lg:mt-0 dark:text-black">
+          <p className="mt-4 max-w-md text-left leading-relaxed text-black sm:text-left lg:mt-0 dark:text-black">
             TMU - Smart Campus Management System: Enhancing the university
             experience through innovation, efficiency, and intelligent solutions
             for students, faculty, and staff.
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-8 border-t border-gray-200 pt-16 md:grid-cols-4 lg:grid-cols-6 dark:border-black">
-          <div className="text-center sm:text-left">
-            <p className="text-lg font-medium text-black dark:text-white">
+        <div className=" w-full mt-16 grid grid-cols-1 gap-8 border-t border-gray-200 pt-16 md:grid-cols-4 lg:grid-cols-6 dark:border-black">
+          <div className="text-left sm:text-left">
+            <p className="text-lg font-medium text-black">
               About Us
             </p>
 
@@ -63,7 +63,7 @@ function Footer() {
             </ul>
           </div>
 
-          <div className="text-center sm:text-left">
+          <div className="text-left sm:text-left">
             <p className="text-lg font-medium text-black dark:text-white">
               Quick Links{" "}
             </p>
@@ -107,7 +107,7 @@ function Footer() {
             </ul>
           </div>
 
-          <div className="text-center sm:text-left">
+          <div className="text-left sm:text-left">
             <p className="text-lg font-medium text-black dark:text-white">
               Important Information
             </p>
@@ -160,7 +160,7 @@ function Footer() {
             </ul>
           </div>
 
-          <div className="text-center sm:text-left">
+          <div className="text-left sm:text-left">
             <p className="text-lg font-medium text-black dark:text-white">
               Campus News{" "}
             </p>
@@ -199,13 +199,13 @@ function Footer() {
             </ul>
           </div>
 
-          <div className="text-center sm:text-left md:col-span-4 lg:col-span-2">
+          <div className="text-left sm:text-left md:col-span-4 lg:col-span-2">
             <p className="text-lg font-medium text-black dark:text-white">
               Get in Touch with us
             </p>
 
             <div className="mx-auto mt-8 max-w-md sm:ms-0">
-              <p className="text-center leading-relaxed text-black ltr:sm:text-left rtl:sm:text-right dark:text-black">
+              <p className="text-left leading-relaxed text-black ltr:sm:text-left rtl:sm:text-right dark:text-black">
                 Join our community to receive the latest updates and insights.
                 We’re here to connect with you!
               </p>
@@ -237,7 +237,7 @@ function Footer() {
         </div>
 
         <div className="mt-16 border-t border-gray-200 pt-6 sm:flex sm:items-center sm:justify-between dark:border-black">
-          <p className="text-center text-sm text-black sm:text-left dark:text-black">
+          <p className="text-left text-sm text-black sm:text-left dark:text-black">
             Copyright &copy; 2022. TMU - SCMS. All rights reserved.
           </p>
 

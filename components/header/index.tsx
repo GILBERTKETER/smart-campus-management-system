@@ -5,11 +5,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import menuData from "./menuData";
+import axios from "axios";
 
 const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [dropdownToggler, setDropdownToggler] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
+  const [userName, setUserName] = useState(null); // To store the user's name
+  const [isAuthenticated, setIsAuthenticated] = useState(false); // To track authentication state
 
   const pathUrl = usePathname();
 
@@ -29,22 +32,52 @@ const Header = () => {
     };
   }, []);
 
+  useEffect(() => {
+    fetchProtectedData();
+  }, []);
+
+  const fetchProtectedData = async () => {
+    const token = localStorage.getItem("authToken");
+    if (!token) console.log("No token yet");
+    try {
+      const response = await axios.get("/api/protected-route", {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+
+      setUserName(response.data.firstName);
+      console.log("data:", response.data);
+      setIsAuthenticated(true);
+    } catch (error) {
+      setUserName(null);
+      setIsAuthenticated(false);
+      console.log(error);
+    }
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("authToken");
+    setUserName(null);
+    setIsAuthenticated(false);
+    window.location.href = "/auth/signin";
+  };
+
   return (
     <header
-      className={`fixed left-0 top-0 z-99999 w-full bg-light ${
-        stickyMenu ? "bg-white shadow transition duration-100" : "relative"
+      className={`fixed left-0 top-0 z-99999 w-full ${
+        stickyMenu
+          ? "bg-light !py-4 shadow transition duration-100"
+          : "relative bg-light"
       }`}
     >
-    
-      <div className="relative mx-auto max-w-c-1390 items-center justify-between  px-20 xl:flex">
+      <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
         <div className="flex w-full items-center justify-between xl:w-1/4">
           <a href="/">
             <Image
               src="/logo.png"
               alt="logo"
               width={110}
-              height={50}
-              className="w-full"
+              height={80}
+              className="w-full dark:hidden"
             />
           </a>
 
@@ -143,14 +176,35 @@ const Header = () => {
           </nav>
 
           <div className="mt-7 flex items-center gap-6 xl:mt-0">
-            <Link
-              href="/auth/signin"
-              className="flex items-center justify-center rounded-md bg-white px-10 py-3 text-regular text-black duration-300 ease-in-out hover:bg-lightgray"
-            >
-              <span className="text-regular font-medium text-waterloo">
-                Register
-              </span>
-            </Link>
+            {/* <ThemeToggler /> */}
+
+            {isAuthenticated ? (
+              <>
+                <span className="text-regular font-medium text-waterloo">
+                  {userName}
+                </span>
+                <button
+                  onClick={handleLogout}
+                  className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-primaryho"
+                >
+                  Logout
+                </button>
+              </>
+            ) : (
+              <>
+                <Link href="/auth/signin">
+                  <span className="text-regular font-medium text-waterloo">
+                    Sign in
+                  </span>
+                </Link>
+                <Link
+                  href="/auth/signup"
+                  className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-primaryho"
+                >
+                  Sign up
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </div>
