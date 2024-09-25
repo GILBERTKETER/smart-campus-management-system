@@ -2,8 +2,8 @@ import React from "react";
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-blue-50 via-transparent to-transparent pb-12 pt-20 sm:pb-16 sm:pt-32 lg:pb-24 xl:pb-32 xl:pt-40">
-      <div className="relative z-[-1]">
+    <section className="relative overflow-hidden bg-light pb-12 pt-20 sm:pb-16 sm:pt-32 lg:pb-24 xl:pb-32 xl:pt-40">
+      <div className="relative">
         <div className="absolute inset-x-0 top-1/2  flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]">
           <svg
             className="h-[60rem] w-[100rem] flex-none stroke-blue-600 opacity-20"
@@ -48,7 +48,7 @@ function Hero() {
             services, enhancing collaboration and operational efficiency for
             students, faculty, and administration.
           </h2>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
+          <div className="relative mt-10 flex items-center justify-center gap-x-6">
             <a
               className="cursor-pointer isomorphic-link isomorphic-link--internal inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-150 hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
               href="/login"

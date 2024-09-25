@@ -54,7 +54,7 @@ function FAQs() {
   };
 
   return (
-    <div className="p-8 bg-white rounded shadow sm:w-full lg:w-1/2 mx-auto my-10">
+    <div className="p-8 bg-extendlight rounded shadow sm:w-full lg:w-1/2 mx-auto my-10">
       <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
         <h1 className="text-3xl font-bold mb-4 sm:mb-0">
           Frequently Asked Questions
@@ -65,14 +65,14 @@ function FAQs() {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           placeholder="Search FAQs"
-          className="w-full sm:w-1/3 p-2 mb-4 sm:mb-0 border rounded"
+          className="w-full sm:w-1/3 p-2 mb-4 sm:mb-0 border rounded bg-light"
         />
       </div>
       <ul id="faqList">
         {filterFAQs().map((faq, index) => (
           <li key={index} className="mb-4">
             <button
-              className="w-full text-left p-4 bg-gray-100 rounded-t shadow hover:bg-gray-200"
+              className="w-full text-left p-4 bg-light rounded-t shadow hover:bg-white"
               onClick={() => toggleFAQ(index)}
             >
               {index + 1}.{" "}

@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 function Footer() {
   return (
-    <footer className=" bg-white w-full px-20">
+    <footer className=" bg-light w-full px-20">
       <div className=" w-full lg:px-4 pb-6 pt-16">
         <div className="lg:flex lg:items-center lg:justify-between">
           <div className="flex justify-center text-teal-600 sm:justify-start dark:text-teal-300">
@@ -20,9 +20,7 @@ function Footer() {
 
         <div className=" w-full mt-16 grid grid-cols-1 gap-8 border-t border-gray-200 pt-16 md:grid-cols-4 lg:grid-cols-6 dark:border-black">
           <div className="text-left sm:text-left">
-            <p className="text-lg font-medium text-black">
-              About Us
-            </p>
+            <p className="text-lg font-medium text-black">About Us</p>
 
             <ul className="mt-8 space-y-4 text-sm">
               <li>

@@ -2,7 +2,7 @@ import React from "react";
 
 function Empowerement() {
   return (
-    <div className="bg-white rounded-md lg:mx-20 my-12 flex py-10 flex-col items-center sm:mt-24">
+    <div id="explore" className="relative bg-light rounded-md lg:mx-20 my-12 flex py-10 flex-col items-center sm:mt-24">
       <a
         target="_blank"
         rel="noreferrer noopener"

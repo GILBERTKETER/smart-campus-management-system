@@ -9,7 +9,7 @@ const FeatureItem: React.FC<FeatureItemProps> = ({
   icon,
 }) => {
   return (
-    <div className="overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2">
+    <div className="overflow-hidden rounded-lg border bg-light select-none hover:shadow hover:shadow-teal-200 p-2">
       <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
         {icon}
         <div className="space-y-2">

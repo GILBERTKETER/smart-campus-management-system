@@ -18,6 +18,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+
 }
 
 @layer utilities {
@@ -26,3 +27,9 @@ body {
   }
 }
 
+
+
+html {
+  scroll-behavior: smooth;
+  /* scroll-margin-top: 100px !important; */
+}

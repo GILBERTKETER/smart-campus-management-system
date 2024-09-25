@@ -31,7 +31,7 @@ function PoweredBy() {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <defs>
-                  {/* <style>.cls-1{fill:#ffb300;}.cls-2{fill:#0074ff;}</style> */}
+                
                 </defs>
                 <title />
                 <path
@@ -80,10 +80,7 @@ function PoweredBy() {
         </div>
 
         <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-          <img
-            src="/lumenario/logo.png"
-            alt="hero image"
-          />
+          <img src="/lumenario/logo.png" alt="hero image" />
         </div>
       </div>
     </section>

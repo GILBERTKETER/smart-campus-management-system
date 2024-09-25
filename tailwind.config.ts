@@ -14,6 +14,7 @@ const config: Config = {
         secondary: "#fcb815",
         primary: "#22409a",
         light: "#eef5fe",
+        extendlight:"#DDECFF",
         black: "#36454F",
         green: "#3d9970",
         lightgray:"#F4F4F4",

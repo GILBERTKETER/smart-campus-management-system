@@ -65,7 +65,7 @@ const Header = () => {
     <header
       className={`fixed left-0 top-0 z-99999 w-full ${
         stickyMenu
-          ? "bg-light !py-4 shadow transition duration-100"
+          ? "bg-extendlight  shadow transition duration-100"
           : "relative bg-light"
       }`}
     >
@@ -75,9 +75,9 @@ const Header = () => {
             <Image
               src="/logo.png"
               alt="logo"
-              width={110}
-              height={80}
-              className="w-full dark:hidden"
+              width={100}
+              height={50}
+              className="dark:hidden"
             />
           </a>
 

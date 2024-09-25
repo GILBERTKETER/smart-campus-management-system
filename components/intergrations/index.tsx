@@ -1,10 +1,10 @@
 import React from "react";
-import IntergrationItem from "./intergrationItem"; // Adjust the path based on your file structure
-import { intergrationData } from "./IntergrationsData"; // Assuming integrationData is where you store the data
+import IntergrationItem from "./intergrationItem";
+import { intergrationData } from "./IntergrationsData"; 
 
 const Integrations = () => {
   return (
-    <section className="py-24">
+    <section className="py-24 bg-light">
       <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
         <div className="w-full flex-col justify-start items-center lg:gap-11 gap-7 inline-flex">
           <div className="w-full justify-between items-center lg:gap-12 gap-7 flex md:flex-row flex-col">
@@ -19,7 +19,7 @@ const Integrations = () => {
             </div>
             <button className="px-5 py-2.5 bg-primary transition-all duration-700 ease-in-out rounded-xl shadow justify-center items-center flex">
               <span className="px-2 py-px text-white text-base font-semibold leading-relaxed whitespace-nowrap">
-                Want to learn more?
+                Explore these features
               </span>
               <div className="w-5 h-5 relative">
                 <svg
@@ -41,7 +41,6 @@ const Integrations = () => {
             </button>
           </div>
 
-          {/* Display the integrations */}
           <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6">
             {intergrationData.map((integration) => (
               <IntergrationItem
